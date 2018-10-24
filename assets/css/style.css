@@ -21,27 +21,29 @@ p {
 
 #header {
 	background-color: #ffffff;
+	position: relative;
 	border-style: solid;
 	border-color: #cccccc;
 	border-top: 0px;
 	border-left: 0px;
 	border-right: 0px;
 	overflow: auto;
+	display: flex;
 	margin-bottom: 10px;
 }
 
-#name {
+.name {
 	background-color: #4aaaa5;
 	color:#ffffff;
-	float: left;
 	padding: 20px;
 }
 
 .nav {
-	float: right;
 	padding: 20px;
 	margin-top: 20px;
 	background-color: white;
+	position: absolute;
+	right: 0px;
 	flex: auto;
 }
 
@@ -88,11 +90,18 @@ p {
 	margin-right: 10px;
 }
 
+.headshot1 {
+	float: left;
+	height: 200px;
+	width: 200px;
+	margin-right: 10px;
+}
+
 #text {
 	margin: 10px;
 }
 
-#indclick {
+.indclick {
 	float: left;
 	padding: 10px;
 	border-right: 1px;
@@ -103,12 +112,12 @@ p {
 	border-color: #777777;
 }
 
-#portclick {
+.portclick {
 	float: left;
 	padding: 10px;
 }
 
-#contclick {
+.contclick {
 	float: left;
 	padding: 10px;
 	border-right: 0px;
@@ -204,4 +213,84 @@ p {
 	background-color:#4aaaa5;
 	color:#ebebeb;
 
+}
+@media screen and (max-width: 960px) {
+	.footer, #footer {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.footer, #footer {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	.name {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 60px;
+	}
+
+	.nav {
+		width: 100%;
+		margin: 0;
+		bottom: 0;
+	}
+
+	.contclick, .indclick, .portclick {
+		position: absolute;
+		bottom: 0px;
+	}
+
+	.contclick {
+		right: 187px;
+	}
+
+	.portclick {
+		right: 270px;
+	}
+
+	.indclick {
+		left: 250px;
+	}
+
+	.underheading1 {
+		flex-wrap: nowrap;
+	}
+
+	.portimg {
+		margin: auto;
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+
+	.headshot {
+		height: 600px;
+		width: 600px;
+	}
+
+	.overportimg {
+		width: 600px;
+	}
+
+	.headshot1 {
+		width: 600px;
+		height: 600px;
+		margin: auto;
+		margin-bottom: 1%;
+	}
+
+	#text {
+		line-height: 1.8;
+	}
+
+	.textbox {
+		margin-top: 1%;
+		margin-bottom: 1%;
+		
+	}
 }
